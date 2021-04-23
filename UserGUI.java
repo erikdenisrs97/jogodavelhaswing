@@ -21,7 +21,6 @@ public class UserGUI {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLocationRelativeTo(null); // Open window centered
     frame.getContentPane().setLayout(new BorderLayout());
-    frame.setVisible(true);
 
     // South JPanel Settings
     JPanel southPanel = new JPanel();
@@ -40,10 +39,17 @@ public class UserGUI {
     }
 
     // Menu
-    JMenuBar menu = new JMenuBar();
+    JMenuBar mb = new JMenuBar();
+    JMenu newGame = new JMenu("Jogar");
     JMenu info = new JMenu("Sobre");
-    menu.add(info);
-    frame.setJMenuBar(menu);
+    JMenu exit = new JMenu("Sair");
+    mb.add(newGame);
+    mb.add(info);
+    mb.add(exit);
+    frame.setJMenuBar(mb);
+    
+    frame.setVisible(true);
+
 
   }
 }
